@@ -1,0 +1,94 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "power"
+	group: "5C88395A7327F5B8"
+	icon: {
+		id: "create:cogwheel"
+	}
+	id: "4BBE4CA6BBF98F76"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "2C0D0AF15AE51CB4"
+			tasks: [{
+				id: "0365BA17CD2AE3E6"
+				item: { count: 1, id: "create:water_wheel" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["2C0D0AF15AE51CB4"]
+			id: "3AED7E8FD8B74409"
+			tasks: [{
+				id: "6EF71422938C8E61"
+				item: { count: 1, id: "create:large_water_wheel" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			id: "14348BF3321EF361"
+			tasks: [{
+				id: "57F288569241C7F0"
+				item: { count: 1, id: "create:hand_crank" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.5d
+		}
+		{
+			id: "79F87A831741EF5B"
+			tasks: [{
+				id: "1CB33230199F18DD"
+				item: { count: 1, id: "create:copper_valve_handle" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			id: "38DD8899639AA75F"
+			rewards: [{
+				count: 20
+				id: "193B2AD90169781A"
+				item: {
+					count: 1
+					id: "create:white_sail"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "48071E565A424E68"
+				item: { count: 1, id: "create:windmill_bearing" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.5d
+		}
+		{
+			id: "0CD0A124A85034CF"
+			tasks: [{
+				id: "6B63253BF01CC8B6"
+				item: { count: 1, id: "create:steam_engine" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.5d
+		}
+		{
+			id: "300928683C19750F"
+			tasks: [{
+				id: "00160208251D94F4"
+				item: { count: 1, id: "create_connected:kinetic_battery" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+	]
+}

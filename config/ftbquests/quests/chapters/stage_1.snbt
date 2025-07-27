@@ -1,0 +1,28 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "stage_1"
+	group: "5E2E524066F92D3E"
+	id: "2624D46C1D143A3E"
+	order_index: 0
+	quest_links: [ ]
+	quests: [{
+		id: "0CAE9C44C15306DB"
+		rewards: [{
+			count: 32
+			id: "3830111B616CEF0D"
+			item: {
+				count: 1
+				id: "create:andesite_alloy"
+			}
+			type: "item"
+		}]
+		tasks: [{
+			id: "4CD3BB67C16BDAE6"
+			item: { count: 1, id: "create:andesite_alloy" }
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+}

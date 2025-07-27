@@ -1,0 +1,287 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 2025-06-11 17:30:54
+Description: Rendering screen
+
+java.lang.IllegalStateException: Image is not allocated.
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.NativeImage.checkAllocated(NativeImage.java:166) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:sodium-common.mixins.json:features.textures.NativeImageAccessor from mod sodium,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.NativeImage._upload(NativeImage.java:418) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:sodium-common.mixins.json:features.textures.NativeImageAccessor from mod sodium,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.NativeImage.upload(NativeImage.java:411) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:sodium-common.mixins.json:features.textures.NativeImageAccessor from mod sodium,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.NativeImage.upload(NativeImage.java:400) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:sodium-common.mixins.json:features.textures.NativeImageAccessor from mod sodium,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.providers.BitmapProvider$Glyph$1.upload(BitmapProvider.java:221) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.FontTexture.add(FontTexture.java:49) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,re:classloading,pl:mixin:APP:immediatelyfast-common.mixins.json:font_atlas_resizing.MixinGlyphAtlasTexture from mod immediatelyfast,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.FontSet.stitch(FontSet.java:168) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.providers.BitmapProvider$Glyph.bake(BitmapProvider.java:198) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.FontSet.computeBakedGlyph(FontSet.java:155) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.CodepointMap.computeIfAbsent(CodepointMap.java:72) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.FontSet.getGlyph(FontSet.java:163) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.Font$StringRenderOutput.accept(Font.java:392) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:immediatelyfast-common.mixins.json:fast_text_lookup.MixinTextRenderer_Drawer from mod immediatelyfast,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.StringDecomposer.feedChar(StringDecomposer.java:17) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.StringDecomposer.iterateFormatted(StringDecomposer.java:120) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.StringDecomposer.iterateFormatted(StringDecomposer.java:84) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.StringDecomposer.iterateFormatted(StringDecomposer.java:80) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.Font.renderText(Font.java:242) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.Font.drawInternal(Font.java:196) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.Font.drawInBatch(Font.java:96) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.GuiGraphics.drawString(GuiGraphics.java:279) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:GuiGraphicsMixin from mod kubejs,pl:mixin:APP:glitchcore.neoforge.mixins.json:client.MixinGuiGraphics from mod glitchcore,pl:mixin:APP:sodium-common.mixins.json:features.textures.animations.tracking.GuiGraphicsMixin from mod sodium,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.compat.MixinDrawContext from mod immediatelyfast,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.consumer.MixinDrawContext from mod immediatelyfast,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.GuiGraphics.drawString(GuiGraphics.java:271) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:GuiGraphicsMixin from mod kubejs,pl:mixin:APP:glitchcore.neoforge.mixins.json:client.MixinGuiGraphics from mod glitchcore,pl:mixin:APP:sodium-common.mixins.json:features.textures.animations.tracking.GuiGraphicsMixin from mod sodium,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.compat.MixinDrawContext from mod immediatelyfast,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.consumer.MixinDrawContext from mod immediatelyfast,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.GuiGraphics.drawString(GuiGraphics.java:267) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:GuiGraphicsMixin from mod kubejs,pl:mixin:APP:glitchcore.neoforge.mixins.json:client.MixinGuiGraphics from mod glitchcore,pl:mixin:APP:sodium-common.mixins.json:features.textures.animations.tracking.GuiGraphicsMixin from mod sodium,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.compat.MixinDrawContext from mod immediatelyfast,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.consumer.MixinDrawContext from mod immediatelyfast,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.gui.CrashScreen.render(CrashScreen.java:69) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.Screen.renderWithTooltip(Screen.java:112) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:computing_frames,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:ScreenMixin from mod kubejs,pl:mixin:APP:ponder.mixins.json:client.accessor.ScreenAccessor from mod ponder,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/neoforge@21.1.176/net.neoforged.neoforge.client.ClientHooks.drawScreenInternal(ClientHooks.java:429) ~[neoforge-21.1.176-universal.jar%23244!/:?] {re:mixin,re:classloading,pl:mixin:APP:sodium-neoforge.mixins.json:platform.neoforge.ClientHooksMixin from mod sodium,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.176/net.neoforged.neoforge.client.ClientHooks.drawScreen(ClientHooks.java:423) ~[neoforge-21.1.176-universal.jar%23244!/:?] {re:mixin,re:classloading,pl:mixin:APP:sodium-neoforge.mixins.json:platform.neoforge.ClientHooksMixin from mod sodium,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:1092) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1195) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:807) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:notenoughcrashes.forge.mixins.json:client.MixinMain from mod notenoughcrashes,pl:mixin:A,pl:runtimedistcleaner:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.39/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.39.jar%23161!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.39/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.39.jar%23161!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.39/net.neoforged.fml.loading.targets.CommonClientLaunchHandler.runService(CommonClientLaunchHandler.java:32) ~[loader-4.0.39.jar%23161!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.39/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.39.jar%23161!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {re:mixin}
+	at io.github.zekerzhayard.forgewrapper.installer.Main.main(Main.java:67) [ForgeWrapper-prism-2024-02-29.jar:prism-2024-02-29] {}
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:105) [NewLaunch.jar:?] {}
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:129) [NewLaunch.jar:?] {}
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70) [NewLaunch.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.NativeImage.checkAllocated(NativeImage.java:166) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:sodium-common.mixins.json:features.textures.NativeImageAccessor from mod sodium,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.NativeImage._upload(NativeImage.java:418) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:sodium-common.mixins.json:features.textures.NativeImageAccessor from mod sodium,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.NativeImage.upload(NativeImage.java:411) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:sodium-common.mixins.json:features.textures.NativeImageAccessor from mod sodium,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.NativeImage.upload(NativeImage.java:400) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:sodium-common.mixins.json:features.textures.NativeImageAccessor from mod sodium,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.providers.BitmapProvider$Glyph$1.upload(BitmapProvider.java:221) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.FontTexture.add(FontTexture.java:49) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,re:classloading,pl:mixin:APP:immediatelyfast-common.mixins.json:font_atlas_resizing.MixinGlyphAtlasTexture from mod immediatelyfast,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.FontSet.stitch(FontSet.java:168) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.providers.BitmapProvider$Glyph.bake(BitmapProvider.java:198) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.FontSet.computeBakedGlyph(FontSet.java:155) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.CodepointMap.computeIfAbsent(CodepointMap.java:72) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.font.FontSet.getGlyph(FontSet.java:163) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.Font$StringRenderOutput.accept(Font.java:392) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:immediatelyfast-common.mixins.json:fast_text_lookup.MixinTextRenderer_Drawer from mod immediatelyfast,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.StringDecomposer.feedChar(StringDecomposer.java:17) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.StringDecomposer.iterateFormatted(StringDecomposer.java:120) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.StringDecomposer.iterateFormatted(StringDecomposer.java:84) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.StringDecomposer.iterateFormatted(StringDecomposer.java:80) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.Font.renderText(Font.java:242) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.Font.drawInternal(Font.java:196) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.Font.drawInBatch(Font.java:96) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.GuiGraphics.drawString(GuiGraphics.java:279) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:GuiGraphicsMixin from mod kubejs,pl:mixin:APP:glitchcore.neoforge.mixins.json:client.MixinGuiGraphics from mod glitchcore,pl:mixin:APP:sodium-common.mixins.json:features.textures.animations.tracking.GuiGraphicsMixin from mod sodium,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.compat.MixinDrawContext from mod immediatelyfast,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.consumer.MixinDrawContext from mod immediatelyfast,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.GuiGraphics.drawString(GuiGraphics.java:271) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:GuiGraphicsMixin from mod kubejs,pl:mixin:APP:glitchcore.neoforge.mixins.json:client.MixinGuiGraphics from mod glitchcore,pl:mixin:APP:sodium-common.mixins.json:features.textures.animations.tracking.GuiGraphicsMixin from mod sodium,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.compat.MixinDrawContext from mod immediatelyfast,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.consumer.MixinDrawContext from mod immediatelyfast,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.GuiGraphics.drawString(GuiGraphics.java:267) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:GuiGraphicsMixin from mod kubejs,pl:mixin:APP:glitchcore.neoforge.mixins.json:client.MixinGuiGraphics from mod glitchcore,pl:mixin:APP:sodium-common.mixins.json:features.textures.animations.tracking.GuiGraphicsMixin from mod sodium,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.compat.MixinDrawContext from mod immediatelyfast,pl:mixin:APP:immediatelyfast-common.mixins.json:hud_batching.consumer.MixinDrawContext from mod immediatelyfast,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.gui.CrashScreen.render(CrashScreen.java:69) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.Screen.renderWithTooltip(Screen.java:112) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:computing_frames,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:ScreenMixin from mod kubejs,pl:mixin:APP:ponder.mixins.json:client.accessor.ScreenAccessor from mod ponder,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/neoforge@21.1.176/net.neoforged.neoforge.client.ClientHooks.drawScreenInternal(ClientHooks.java:429) ~[neoforge-21.1.176-universal.jar%23244!/:?] {re:mixin,re:classloading,pl:mixin:APP:sodium-neoforge.mixins.json:platform.neoforge.ClientHooksMixin from mod sodium,pl:mixin:A}
+	at TRANSFORMER/neoforge@21.1.176/net.neoforged.neoforge.client.ClientHooks.drawScreen(ClientHooks.java:423) ~[neoforge-21.1.176-universal.jar%23244!/:?] {re:mixin,re:classloading,pl:mixin:APP:sodium-neoforge.mixins.json:platform.neoforge.ClientHooksMixin from mod sodium,pl:mixin:A}
+-- Screen render details --
+Details:
+	Screen name: fudge.notenoughcrashes.gui.CrashScreen
+	Mouse location: Scaled: (351, 189). Absolute: (1054.000000, 567.000000)
+	Screen size: Scaled: (640, 337). Absolute: (1920, 1009). Scale factor of 3.000000
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:1092) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1195) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:807) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/notenoughcrashes@4.4.9+1.21.1/fudge.notenoughcrashes.mixinhandlers.InGameCatcher.handleClientCrash(InGameCatcher.java:36) ~[notenoughcrashes-neoforge-4.4.9+1.21.1.jar%23287!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.modify$zze000$notenoughcrashes$atTheEndOfFirstCatchBeforePrintingCrashReport(Minecraft.java:3084) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:825) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[client-1.21.1-20240808.144430-srg.jar%23243!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:notenoughcrashes.forge.mixins.json:client.MixinMain from mod notenoughcrashes,pl:mixin:A,pl:runtimedistcleaner:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.39/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.39.jar%23161!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.39/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.39.jar%23161!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.39/net.neoforged.fml.loading.targets.CommonClientLaunchHandler.runService(CommonClientLaunchHandler.java:32) ~[loader-4.0.39.jar%23161!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.39/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.39.jar%23161!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.4.jar%23166!/:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {re:mixin}
+	at io.github.zekerzhayard.forgewrapper.installer.Main.main(Main.java:67) [ForgeWrapper-prism-2024-02-29.jar:prism-2024-02-29] {}
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:105) [NewLaunch.jar:?] {}
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:129) [NewLaunch.jar:?] {}
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70) [NewLaunch.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.3, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
+	Memory: 618356992 bytes (589 MiB) / 5368709120 bytes (5120 MiB) up to 12582912000 bytes (12000 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 3700X 8-Core Processor             
+	Identifier: AuthenticAMD Family 23 Model 113 Stepping 0
+	Microarchitecture: Zen 2
+	Frequency (GHz): 3.59
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: NVIDIA GeForce RTX 3060
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 12288.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.7652
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 2.13
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 2.13
+	Memory slot #1 type: DDR4
+	Virtual memory max (MiB): 34728.16
+	Virtual memory used (MiB): 25002.01
+	Swap memory total (MiB): 2048.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 239887.81, total: 476017.84
+	Space in storage for workdir (MiB): available: 122995.77, total: 476923.00
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms512m -Xmx12000m
+	Client Crashes Since Restart: 7
+	Integrated Server Crashes Since Restart: 0
+	ModLauncher: 11.0.4+main.d2e20e43
+	ModLauncher launch target: forgeclient
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.39.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.39.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.39.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.4.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.4.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		kotlinforforge@5.8.0
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		allthemodium-2.9.3_mc_1.21.1.jar                  |Allthemodium                  |allthemodium                  |2.9.3               |Manifest: NOSIGNATURE
+		architectury-13.0.8-neoforge.jar                  |Architectury                  |architectury                  |13.0.8              |Manifest: NOSIGNATURE
+		betterfpsdist-1.21-6.0.jar                        |betterfpsdist mod             |betterfpsdist                 |6.0                 |Manifest: NOSIGNATURE
+		BiomesOPlenty-neoforge-1.21.1-21.1.0.12.jar       |Biomes O' Plenty              |biomesoplenty                 |21.1.0.12           |Manifest: NOSIGNATURE
+		Clumps-neoforge-1.21.1-19.0.0.1.jar               |Clumps                        |clumps                        |19.0.0.1            |Manifest: NOSIGNATURE
+		conditional-mixin-neoforge-0.6.4.jar              |conditional mixin             |conditional_mixin             |0.6.4               |Manifest: NOSIGNATURE
+		create-1.21.1-6.0.5.jar                           |Create                        |create                        |6.0.5               |Manifest: NOSIGNATURE
+		create-confectionery1.21.1_v1.1.2.jar             |Create Confectionery          |create_confectionery          |1.1.2               |Manifest: NOSIGNATURE
+		Create Encased-1.21.1-1.7.1-fix2.jar              |Create Encased                |createcasing                  |1.7.1-fix2          |Manifest: NOSIGNATURE
+		create_jetpack-forge-5.1.0.jar                    |Create Jetpack                |create_jetpack                |5.1.0               |Manifest: NOSIGNATURE
+		createliquidfuel-2.1.1-1.21.1.jar                 |Create Liquid Fuel            |createliquidfuel              |2.1.1-1.21.1        |Manifest: NOSIGNATURE
+		create_mechanical_extruder-1.21.1-2.1.1-6.0.4.jar |Create Mechanical Extruder    |create_mechanical_extruder    |1.21.1-2.1.1-6.0.4  |Manifest: NOSIGNATURE
+		create-stuff-additions1.21.1_v2.1.0e.jar          |Create Stuff 'N Additions     |create_sa                     |2.1.0.              |Manifest: NOSIGNATURE
+		create-central-kitchen-2.1.2.jar                  |Create: Central Kitchen       |create_central_kitchen        |2.1.2               |Manifest: NOSIGNATURE
+		create_connected-1.1.4-mc1.21.1.jar               |Create: Connected             |create_connected              |1.1.4-mc1.21.1      |Manifest: NOSIGNATURE
+		copycats-3.0.1+mc.1.21.1-neoforge.jar             |Create: Copycats+             |copycats                      |3.0.1+mc.1.21.1-neof|Manifest: NOSIGNATURE
+		Create_Desires-2-Dreams-1.21.1-2.0.0.jar          |Create: Desires 2 Dreams      |create_d2d                    |2.0.0               |Manifest: NOSIGNATURE
+		create-dragons-plus-1.5.2.jar                     |Create: Dragons Plus          |create_dragons_plus           |1.5.2               |Manifest: NOSIGNATURE
+		create-enchantment-industry-2.1.5.jar             |Create: Enchantment Industry  |create_enchantment_industry   |2.1.5               |Manifest: NOSIGNATURE
+		createframed-1.21.1-1.6.6.jar                     |Create: Framed                |createframed                  |1.6.6               |Manifest: NOSIGNATURE
+		create_power_loader-2.0.3-mc1.21.1.jar            |Create: Power Loader          |create_power_loader           |2.0.3-mc1.21.1      |Manifest: NOSIGNATURE
+		create_things_and_misc-4.0-neoforge-1.21.1.jar    |create: things and misc       |create_things_and_misc        |1.0.0               |Manifest: NOSIGNATURE
+		trading_floor-3.0.8.jar                           |Create: Trading Floor         |trading_floor                 |3.0.8               |Manifest: NOSIGNATURE
+		cupboard-1.21-2.9.jar                             |Cupboard mod                  |cupboard                      |2.9                 |Manifest: NOSIGNATURE
+		dynamic-fps-3.9.4+minecraft-1.21.0-neoforge.jar   |Dynamic FPS                   |dynamic_fps                   |3.9.4               |Manifest: NOSIGNATURE
+		entityculling-neoforge-1.7.4-mc1.21.jar           |EntityCulling                 |entityculling                 |1.7.4               |Manifest: NOSIGNATURE
+		FarmersDelight-1.21.1-1.2.8.jar                   |Farmer's Delight              |farmersdelight                |1.2.8               |Manifest: NOSIGNATURE
+		flightlib-forge-3.1.0.jar                         |Flight Lib                    |flightlib                     |3.1.0               |Manifest: NOSIGNATURE
+		flywheel-neoforge-1.21.1-1.0.2.jar                |Flywheel                      |flywheel                      |1.0.2               |Manifest: NOSIGNATURE
+		fabric-api-base-0.4.42+d1308ded19.jar             |Forgified Fabric API Base     |fabric_api_base               |0.4.42+d1308ded19   |Manifest: NOSIGNATURE
+		fabric-block-view-api-v2-1.0.10+9afaaf8c19.jar    |Forgified Fabric BlockView API|fabric_block_view_api_v2      |1.0.10+9afaaf8c19   |Manifest: NOSIGNATURE
+		fabric-renderer-api-v1-3.4.0+9c40919e19.jar       |Forgified Fabric Renderer API |fabric_renderer_api_v1        |3.4.0+9c40919e19    |Manifest: NOSIGNATURE
+		fabric-rendering-data-attachment-v1-0.3.48+73761d2|Forgified Fabric Rendering Dat|fabric_rendering_data_attachme|0.3.48+73761d2e19   |Manifest: NOSIGNATURE
+		ftb-essentials-neoforge-2101.1.6.jar              |FTB Essentials                |ftbessentials                 |2101.1.6            |Manifest: NOSIGNATURE
+		ftb-library-neoforge-2101.1.13.jar                |FTB Library                   |ftblibrary                    |2101.1.13           |Manifest: NOSIGNATURE
+		ftb-quests-neoforge-2101.1.9.jar                  |FTB Quests                    |ftbquests                     |2101.1.9            |Manifest: NOSIGNATURE
+		ftb-ranks-neoforge-2101.1.3.jar                   |FTB Ranks                     |ftbranks                      |2101.1.3            |Manifest: NOSIGNATURE
+		ftb-teams-neoforge-2101.1.2.jar                   |FTB Teams                     |ftbteams                      |2101.1.2            |Manifest: NOSIGNATURE
+		ftb-ultimine-neoforge-2101.1.3.jar                |FTB Ultimine                  |ftbultimine                   |2101.1.3            |Manifest: NOSIGNATURE
+		fusion-1.2.7b-neoforge-mc1.21.jar                 |Fusion                        |fusion                        |1.2.7+b             |Manifest: NOSIGNATURE
+		geckolib-neoforge-1.21.1-4.7.5.1.jar              |GeckoLib 4                    |geckolib                      |4.7.5.1             |Manifest: NOSIGNATURE
+		GlitchCore-neoforge-1.21.1-2.1.0.0.jar            |GlitchCore                    |glitchcore                    |2.1.0.0             |Manifest: NOSIGNATURE
+		gpumemleakfix-1.21-1.8.jar                        |Gpu memory leak fix           |gpumemleakfix                 |1.8                 |Manifest: NOSIGNATURE
+		gravestone-neoforge-1.21.1-1.0.24.jar             |Gravestone Mod                |gravestone                    |1.21.1-1.0.24       |Manifest: NOSIGNATURE
+		handcrafted-neoforge-1.21.1-4.0.3.jar             |Handcrafted                   |handcrafted                   |4.0.3               |Manifest: NOSIGNATURE
+		ImmediatelyFast-NeoForge-1.6.5+1.21.1.jar         |ImmediatelyFast               |immediatelyfast               |1.6.5+1.21.1        |Manifest: NOSIGNATURE
+		jei-1.21.1-neoforge-19.21.2.313.jar               |Just Enough Items             |jei                           |19.21.2.313         |Manifest: NOSIGNATURE
+		thedarkcolour.kffmod-5.8.0.jar                    |Kotlin For Forge              |kotlinforforge                |5.8.0               |Manifest: NOSIGNATURE
+		kubejs-neoforge-2101.7.1-build.181.jar            |KubeJS                        |kubejs                        |2101.7.1-build.181  |Manifest: NOSIGNATURE
+		mechanicals-1.21.1-1.0.9.jar                      |Mechanicals Lib               |mechanicals                   |1.0.8               |Manifest: NOSIGNATURE
+		client-1.21.1-20240808.144430-srg.jar             |Minecraft                     |minecraft                     |1.21.1              |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		neoforge-21.1.176-universal.jar                   |NeoForge                      |neoforge                      |21.1.176            |Manifest: NOSIGNATURE
+		notenoughcrashes-neoforge-4.4.9+1.21.1.jar        |Not Enough Crashes            |notenoughcrashes              |4.4.9+1.21.1        |Manifest: NOSIGNATURE
+		Ponder-NeoForge-1.21.1-1.0.46.jar                 |Ponder                        |ponder                        |1.0.46              |Manifest: NOSIGNATURE
+		ProbeJS-7.5.1.jar                                 |ProbeJS                       |probejs                       |7.5.1               |Manifest: NOSIGNATURE
+		rechiseled-1.1.6a-neoforge-mc1.21.jar             |Rechiseled                    |rechiseled                    |1.1.6+a             |Manifest: NOSIGNATURE
+		rechiseledcreate-1.0.2-neoforge-mc1.21.jar        |Rechiseled: Create            |rechiseledcreate              |1.0.2               |Manifest: NOSIGNATURE
+		resourcefullib-neoforge-1.21-3.0.12.jar           |Resourceful Lib               |resourcefullib                |3.0.12              |Manifest: NOSIGNATURE
+		rhino-2101.2.7-build.74.jar                       |Rhino                         |rhino                         |2101.2.7-build.74   |Manifest: NOSIGNATURE
+		voicechat-neoforge-1.21.1-2.5.30.jar              |Simple Voice Chat             |voicechat                     |1.21.1-2.5.30       |Manifest: NOSIGNATURE
+		sodium-neoforge-0.6.13+mc1.21.1.jar               |Sodium                        |sodium                        |0.6.13+mc1.21.1     |Manifest: NOSIGNATURE
+		sound-physics-remastered-neoforge-1.21.1-1.4.12.ja|Sound Physics Remastered      |sound_physics_remastered      |1.21.1-1.4.12       |Manifest: NOSIGNATURE
+		supermartijn642configlib-1.1.8-neoforge-mc1.21.jar|SuperMartijn642's Config Libra|supermartijn642configlib      |1.1.8               |Manifest: NOSIGNATURE
+		supermartijn642corelib-1.1.18a-neoforge-mc1.21.jar|SuperMartijn642's Core Lib    |supermartijn642corelib        |1.1.18+a            |Manifest: NOSIGNATURE
+		TerraBlender-neoforge-1.21.1-4.1.0.8.jar          |TerraBlender                  |terrablender                  |4.1.0.8             |Manifest: NOSIGNATURE
+	Crash Report UUID: 38260049-eeab-4ea3-8487-9ac9b5b80e23
+	FML: 4.0.39
+	NeoForge: 21.1.176
+	Flywheel Backend: flywheel:indirect
+	Suspected Mods: Not Enough Crashes (notenoughcrashes), Minecraft (minecraft), NeoForge (neoforge)

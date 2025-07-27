@@ -1,0 +1,18 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "progress"
+	group: ""
+	id: "48FA54C0C8B686E8"
+	order_index: 1
+	quest_links: [ ]
+	quests: [{
+		id: "60FA05DED92E06C0"
+		tasks: [{
+			id: "2E5860C07ADDE61A"
+			type: "checkmark"
+		}]
+		x: -3.0d
+		y: 0.0d
+	}]
+}
