@@ -13,6 +13,7 @@ schematics/
 server-resource-packs/
 shaderpacks/
 texturepacks/
+crash-reports/
 
 command_history.txt
 icon.png
