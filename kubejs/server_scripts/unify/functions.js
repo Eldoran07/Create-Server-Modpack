@@ -8,7 +8,7 @@ function unify_crusher(event, input, result) {
         "result": {
           "item": result
         }
-    }).id("eldoran:createlive/unify_electrum_ingot_crusher");
+    })
 
     event.custom({
         "type": "create:crushing",
