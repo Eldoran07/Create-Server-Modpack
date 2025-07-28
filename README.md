@@ -2,6 +2,7 @@
 
 Willkommen im offiziellen GitHub-Repository für den **Minecraft Create Server**!  
 Hier findest du alle **KubeJS-Skripte**, öffentliche Informationen zum Server-Setup und Hinweise zur Teilnahme.
+Die Skripte befinden sich im kubejs/ Verzeichnis.
 
 ---
 
