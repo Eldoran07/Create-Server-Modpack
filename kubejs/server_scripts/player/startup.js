@@ -1,3 +1,5 @@
+//28.07.2025 Eldoran
+
 PlayerEvents.loggedIn((event) => {
   if (!event.player.stages.has("first_login")) {
     event.player.stages.add("first_login");

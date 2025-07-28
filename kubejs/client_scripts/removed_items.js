@@ -1,3 +1,5 @@
+//27.07.2025 Eldoran
+
 const item_remove = [
   "allthemodium:alloy_paxel",
   "allthemodium:alloy_shovel",

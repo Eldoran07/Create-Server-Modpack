@@ -1,3 +1,5 @@
+//27.07.2025 Eldoran
+
 RecipeViewerEvents.removeEntries("item", (event) => {
   item_remove.forEach((item) => {
     event.remove(item);

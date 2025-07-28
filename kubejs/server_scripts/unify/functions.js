@@ -1,3 +1,5 @@
+//03.07.2025 Eldoran
+
 function unify_crusher(event, input, result) {
     event.custom({
         "type": "immersiveengineering:crusher",
